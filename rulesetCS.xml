@@ -2,6 +2,8 @@
 <ruleset name="ruleset">
     <description>ShopSys Coding Standards</description>
 
+    <config name="installed_paths" value="../../slevomat/coding-standard"/><!-- relative path from PHPCS source location -->
+
     <!-- Include the whole PSR-2 standard -->
     <rule ref="PSR2"/>
 
@@ -47,4 +49,7 @@
     <rule ref="Squiz.WhiteSpace.CastSpacing"/>
     <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+
+    <!-- Slevomat Coding Standards -->
+    <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
 </ruleset>

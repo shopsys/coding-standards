@@ -1,7 +1,7 @@
 imports:
     # for PSR-2 description, see: http://www.php-fig.org/psr/psr-2/
     - { resource: '%vendor_dir%/symplify/easy-coding-standard/config/psr2.yml' }
-    - { resource: '%vendor_dir%/symplify/better-phpdoc-parser/config/config.yaml' }
+    - { resource: '%vendor_dir%/symplify/better-phpdoc-parser/config/config.yml' }
 
 services:
     _defaults:

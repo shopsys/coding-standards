@@ -10,6 +10,9 @@
             "homepage": "https://www.shopsys.com/"
         }
     ],
+    "conflict": {
+        "symfony/dependency-injection": ">=4.4.19 <5.0"
+    },
     "require": {
         "php": "^7.2",
         "ext-tokenizer": "*",
@@ -34,6 +37,11 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\CodingStandards\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "9.2.x-dev"
         }
     }
 }

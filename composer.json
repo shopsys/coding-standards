@@ -14,7 +14,7 @@
         "symfony/dependency-injection": ">=4.4.19"
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.2 || ^8.0",
         "ext-tokenizer": "*",
         "friendsofphp/php-cs-fixer": "^2.14.0",
         "jakub-onderka/php-parallel-lint": "^0.9",

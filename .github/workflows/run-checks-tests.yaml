@@ -1,6 +1,10 @@
-on: 
-    push: ~
-    pull_request: ~
+on:
+    push:
+        branches:
+             - 'master'
+    pull_request:
+        branches:
+            - '**'
 name: "Checks and tests"
 jobs:
     checks-and-tests:
@@ -12,10 +16,8 @@ jobs:
                 composer-prefered-dependencies: ['--prefer-lowest', '']
             fail-fast: false
         steps:
-            -   name: GIT checkout branch - ${{ github.ref }}
+            -   name: GIT checkout
                 uses: actions/checkout@v2
-                with:
-                    ref: ${{ github.ref }}
             -   name: Install PHP, extensions and tools
                 uses: shivammathur/setup-php@v2
                 with:

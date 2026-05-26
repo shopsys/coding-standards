@@ -6,26 +6,26 @@ namespace Shopsys\CodingStandards\CsFixer;
 
 use Override;
 
-class FinalFormTypeFixer extends AbstractFinalClassByParentFixer
+class FinalMigrationFixer extends AbstractFinalClassByParentFixer
 {
     #[Override]
     protected function getDescription(): string
     {
-        return 'Form types extending AbstractType or AbstractTypeExtension must be final.';
+        return 'Doctrine migrations extending AbstractMigration must be final.';
     }
 
     #[Override]
     protected function getMatchingParentClasses(): array
     {
         return [
-            'Symfony\Component\Form\AbstractType',
-            'Symfony\Component\Form\AbstractTypeExtension',
+            'Shopsys\MigrationBundle\Component\Doctrine\Migrations\AbstractMigration',
+            'Doctrine\Migrations\AbstractMigration',
         ];
     }
 
     #[Override]
     public function getName(): string
     {
-        return 'Shopsys/final_form_type';
+        return 'Shopsys/final_migration';
     }
 }
